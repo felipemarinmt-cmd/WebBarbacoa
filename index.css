@@ -769,43 +769,36 @@ section {
 }
 
 .masonry-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-2);
-    /* Altura automatica para simular masonry en CSS basico */
+    columns: 2;
+    column-gap: var(--spacing-4);
 }
 
 @media (min-width: 768px) {
     .masonry-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: var(--spacing-4);
+        columns: 3;
     }
 }
 
 .masonry-item {
+    break-inside: avoid;
+    margin-bottom: var(--spacing-4);
     border-radius: var(--radius-md);
     overflow: hidden;
     position: relative;
-    height: 250px;
-}
-
-/* En caso de usar grid asimetrico para darle el look "Instagram" */
-@media (min-width: 768px) {
-    .masonry-item:nth-child(1) { grid-column: span 2; grid-row: span 2; height: 100%;}
-    .masonry-item:nth-child(2) { height: 250px; }
-    .masonry-item:nth-child(3) { height: 250px; }
-    .masonry-item:nth-child(6) { grid-column: span 2; }
+    /* Remover grid-column span y alturas forzadas para que fluya natural */
 }
 
 .masonry-item img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    display: block;
     object-fit: cover;
     transition: transform 0.5s ease;
+    will-change: transform;
 }
 
 .masonry-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* ==========================================================================
@@ -1008,4 +1001,126 @@ section {
         right: 60px;
         font-size: 0.8rem;
     }
+}
+
+/* ==========================================================================
+   Sección Reseñas (Google Maps Style)
+   ========================================================================== */
+.reseñas {
+    padding: var(--spacing-12) 0;
+}
+
+.google-rating {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    margin-top: var(--spacing-3);
+}
+
+.rating-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--clr-charcoal);
+}
+
+.text-warning { color: #fbbc04; }
+.bg-blue { background-color: #4285f4; }
+.bg-green { background-color: #0f9d58; }
+
+.google-rating .stars {
+    font-size: 1.5rem;
+}
+
+.rating-text {
+    font-size: 0.9rem;
+    color: var(--clr-gray-500);
+}
+
+.reviews-slider {
+    margin-top: var(--spacing-6);
+    overflow-x: auto;
+    padding-bottom: var(--spacing-4);
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+}
+.reviews-slider::-webkit-scrollbar { display: none; }
+
+.reviews-track {
+    display: flex;
+    gap: var(--spacing-4);
+    width: max-content;
+    padding: 0 var(--spacing-2);
+}
+
+.review-card {
+    background: var(--clr-white);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    width: 350px;
+    scroll-snap-align: center;
+    transition: var(--transition);
+    border: 1px solid var(--clr-gray-100);
+}
+.review-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-2);
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+}
+
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--clr-terracotta);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.reviewer-name { font-size: 1rem; margin: 0; }
+.review-date { font-size: 0.8rem; color: var(--clr-gray-500); }
+.google-icon { color: #4285f4; font-size: 1.5rem; }
+.small-stars { font-size: 0.9rem; margin-bottom: var(--spacing-2); }
+.review-text { font-size: 0.95rem; color: var(--clr-gray-800); font-style: italic; }
+
+/* ==========================================================================
+   Global Animations (Reveal) e Interactividad
+   ========================================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    will-change: opacity, transform; /* Hardware Acceleration for smooth scrolling */
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhancing Hover States */
+.card { transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:active, .btn-whatsapp:active {
+    transform: translateY(0) scale(0.95);
+    box-shadow: var(--shadow-sm);
 }

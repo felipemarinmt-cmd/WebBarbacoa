@@ -48,6 +48,7 @@
                     <li class="nav-item"><a href="#inicio" class="nav-link active">Inicio</a></li>
                     <li class="nav-item"><a href="#historia" class="nav-link">Nuestra Historia</a></li>
                     <li class="nav-item"><a href="#menu" class="nav-link">Menú</a></li>
+                    <li class="nav-item"><a href="#resenas" class="nav-link">Reseñas</a></li>
                     <li class="nav-item"><a href="#galeria" class="nav-link">Galería</a></li>
                     <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
                 </ul>
@@ -423,6 +424,103 @@
             </div>
         </section>
 
+        <!-- Reseñas de Clientes (Google Maps Simulation) -->
+        <section class="reseñas bg-gray" id="resenas">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Lo que dicen nuestros clientes</span>
+                    <h2 class="section-title">Reseñas en Google Maps</h2>
+                    <div class="google-rating">
+                        <span class="rating-number">4.4</span>
+                        <div class="stars">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <i class="fa-solid fa-star-half-stroke text-warning"></i>
+                        </div>
+                        <span class="rating-text">Basado en 47 reseñas</span>
+                    </div>
+                </div>
+
+                <div class="reviews-slider">
+                    <div class="reviews-track">
+                        <!-- Review 1 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <div class="reviewer-avatar">J</div>
+                                    <div>
+                                        <h4 class="reviewer-name">Jeremin</h4>
+                                        <span class="review-date">hace 2 meses</span>
+                                    </div>
+                                </div>
+                                <i class="fa-brands fa-google google-icon"></i>
+                            </div>
+                            <div class="stars small-stars">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                            <p class="review-text">"¡Totalmente recomendado! Si buscas el verdadero sabor de la región, este es el lugar. Los asados huilenses son riquísimos y la lechona tiene un sazón espectacular, muy bien sazonada. Además, los platos ejecutivos son muy baratos y de excelente calidad, ideales para el día a día. Lo mejor es que no pierdes tiempo: el servicio es muy rápido y la atención es de diez. También es muy cómodo venir en carro porque tienen muy buen espacio para aparcar. Sin duda, una de las mejores opciones por calidad, precio y comodidad. ¡Volveré sin falta!"</p>
+                        </div>
+                        
+                        <!-- Review 2 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <div class="reviewer-avatar bg-blue">N</div>
+                                    <div>
+                                        <h4 class="reviewer-name">Nicolas Pama</h4>
+                                        <span class="review-date">hace 2 meses</span>
+                                    </div>
+                                </div>
+                                <i class="fa-brands fa-google google-icon"></i>
+                            </div>
+                            <div class="stars small-stars">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                            <p class="review-text">"Lo hemos visitamos algunos fines de semana con mi familia y siempre que vamos a Gigante vamos allá porque el restaurante es muy agradable por su infraestructura tipo campestre, lo que hace que sea un espacio fresco; además, toda la camida es muy rica, sin excepción alguna."</p>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <div class="reviewer-avatar bg-green">C</div>
+                                    <div>
+                                        <h4 class="reviewer-name">Claudia Campo</h4>
+                                        <span class="review-date">hace un año</span>
+                                    </div>
+                                </div>
+                                <i class="fa-brands fa-google google-icon"></i>
+                            </div>
+                            <div class="stars small-stars">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                            <p class="review-text">"Qué lugar tan agradable, desde sus instalaciones muy familiares, su servicio hasta su comida. Tienen un muy buen asado huilense porque su carne está muy bien sazonada. Si visitan este lugar no se arrepentirán."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="https://maps.google.com/?q=Barbacoa+Restaurante+Tipico+Gigante" target="_blank" class="btn btn-outline-primary">
+                        <i class="fa-brands fa-google"></i> Dejar una Reseña en Google
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- Galeria Social Section -->
         <section class="galeria" id="galeria">
             <div class="container galeria-container">
@@ -436,22 +534,22 @@
 
                 <div class="masonry-grid">
                     <div class="masonry-item"><img src="assets/galeria_2.jpeg"
-                            alt="Fotografía del ambiente de Barbacoa Restaurante" loading="lazy">
+                            alt="Fotografía del ambiente de Barbacoa Restaurante" loading="lazy" decoding="async">
                     </div>
                     <div class="masonry-item"><img src="assets/galeria_1.jpeg" alt="Detalle del asador a leña"
-                            loading="lazy">
+                            loading="lazy" decoding="async">
                     </div>
                     <div class="masonry-item"><img src="assets/4.JPEG" alt="Entrada del restaurante Barbacoa"
-                            loading="lazy">
+                            loading="lazy" decoding="async">
                     </div>
                     <div class="masonry-item"><img src="assets/panceta_crujiente.jpeg"
-                            alt="Plato de Panceta Crujiente servida" loading="lazy">
+                            alt="Plato de Panceta Crujiente servida" loading="lazy" decoding="async">
                     </div>
                     <div class="masonry-item"><img src="assets/hero.png" alt="Instalaciones del restaurante"
-                            loading="lazy">
+                            loading="lazy" decoding="async">
                     </div>
                     <div class="masonry-item"><img src="assets/pollo_al_carbon.jpeg" alt="Nuestro pollo asado al carbón"
-                            loading="lazy">
+                            loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
