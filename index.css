@@ -368,6 +368,13 @@ section {
     padding-top: 70px; /* Offset for header */
 }
 
+/* Solución para el problema de carga/zoom en móviles (iOS) */
+@media (max-width: 1024px) {
+    .hero {
+        background-attachment: scroll;
+    }
+}
+
 .hero-overlay {
     position: absolute;
     inset: 0;
